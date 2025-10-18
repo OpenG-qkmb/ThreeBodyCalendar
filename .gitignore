@@ -43,3 +43,61 @@
 # Ignore .vs/
 
 .vs/
+
+# 编译生成文件
+build/
+bin/
+lib/
+*.exe
+*.out
+*.app
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+install_manifest.txt
+compile_commands.json
+
+# Visual Studio
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.suo
+*.user
+*.aps
+*.ncb
+*.opendb
+*.db
+*.tlog
+*.log
+*.dll
+*.exp
+*.lib
+*.pdb
+*.ilk
+ipch/
+*.obj
+*.pch
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 文档生成
+doxygen/
+html/
+latex/
+
+# 临时文件
+*.tmp
+*.temp
+
+# 日志文件
+*.log
+
+# 备份文件
+*.bak
+*.backup
