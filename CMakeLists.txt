@@ -1,21 +1,77 @@
-﻿# CMakeList.txt: ThreeBodyCalendar 的 CMake 项目，在此处包括源代码并定义
-# 项目特定的逻辑。
-#
-cmake_minimum_required (VERSION 3.8)
+﻿cmake_minimum_required(VERSION 3.15)
+project(ThreeBodyCalendar
+    VERSION 1.0.0
+    DESCRIPTION "ThreeBodyCalendar"
+    LANGUAGES CXX
+)
 
-# 如果支持，请为 MSVC 编译器启用热重载。
-if (POLICY CMP0141)
-  cmake_policy(SET CMP0141 NEW)
-  set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
+# 基础配置
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# 在Windows上设置一些默认选项
+if(WIN32)
+    # 使用Unicode
+    add_definitions(-DUNICODE -D_UNICODE)
 endif()
 
-project ("ThreeBodyCalendar")
+# 输出目录
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-# 将源代码添加到此项目的可执行文件。
-add_executable (ThreeBodyCalendar "ThreeBodyCalendar.cpp" "ThreeBodyCalendar.h")
+# 包含目录
+include_directories(include)
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET ThreeBodyCalendar PROPERTY CXX_STANDARD 20)
+# 收集源文件
+file(GLOB_RECURSE SOURCE_FILES 
+    "src/*.cpp"
+    "src/*.c"
+)
+
+# 创建可执行文件
+add_executable(ThreeBodyCalendar ${SOURCE_FILES})
+
+# 设置编译选项 - 必须在目标创建后调用
+if(MSVC)
+    # MSVC编译器选项
+    target_compile_options(ThreeBodyCalendar PRIVATE 
+        /W4           # 警告等级4
+        /permissive-  # 标准一致性模式
+    )
+    
+    # 在Debug模式禁用优化，Release模式启用优化
+    target_compile_options(ThreeBodyCalendar PRIVATE 
+        $<$<CONFIG:Debug>:/Od>
+        $<$<CONFIG:Release>:/O2>
+    )
+else()
+    # GCC/Clang编译器选项
+    target_compile_options(ThreeBodyCalendar PRIVATE 
+        -Wall
+        -Wextra
+    )
 endif()
 
-# TODO: 如有需要，请添加测试并安装目标。
+# 设置链接选项
+if(MSVC)
+    target_link_options(ThreeBodyCalendar PRIVATE /DEBUG)
+endif()
+
+# 设置目标属性
+set_target_properties(ThreeBodyCalendar PROPERTIES
+    OUTPUT_NAME "ThreeBodyCalendar"
+    VERSION ${PROJECT_VERSION}
+)
+
+# 为Visual Studio设置启动工作目录
+if(MSVC)
+    set_target_properties(ThreeBodyCalendar PROPERTIES
+        VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$(Configuration)"
+    )
+endif()
+
+message(STATUS "Project configuration completed.")
+message(STATUS "Number of source files: ${SOURCE_FILES}")
+message(STATUS "Output directory: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
