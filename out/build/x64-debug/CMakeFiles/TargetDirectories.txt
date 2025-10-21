@@ -1,3 +1,5 @@
 D:/courses/_debug/2025autumn/C/perpetual_calendar/ThreeBodyCalendar/out/build/x64-debug/CMakeFiles/ThreeBodyCalendar.dir
+D:/courses/_debug/2025autumn/C/perpetual_calendar/ThreeBodyCalendar/out/build/x64-debug/CMakeFiles/GravityEngineTests.dir
+D:/courses/_debug/2025autumn/C/perpetual_calendar/ThreeBodyCalendar/out/build/x64-debug/CMakeFiles/test.dir
 D:/courses/_debug/2025autumn/C/perpetual_calendar/ThreeBodyCalendar/out/build/x64-debug/CMakeFiles/edit_cache.dir
 D:/courses/_debug/2025autumn/C/perpetual_calendar/ThreeBodyCalendar/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
