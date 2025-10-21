@@ -31,7 +31,7 @@ file(GLOB_RECURSE SOURCE_FILES
 )
 
 # 创建可执行文件
-add_executable(ThreeBodyCalendar ${SOURCE_FILES})
+add_executable(ThreeBodyCalendar ${SOURCE_FILES} "include/physics/Integrator.h" "src/physics/Integrator.cpp" "include/physics/GravityEngine.h" "src/physics/GravityEngine.cpp")
 
 # 设置编译选项 - 必须在目标创建后调用
 if(MSVC)
@@ -75,3 +75,37 @@ endif()
 message(STATUS "Project configuration completed.")
 message(STATUS "Number of source files: ${SOURCE_FILES}")
 message(STATUS "Output directory: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+
+# Enable testing and add unit test target for GravityEngine
+enable_testing()
+
+add_executable(GravityEngineTests
+    tests/GravityEngineTests.cpp
+    src/physics/GravityEngine.cpp
+    src/core/Vector3D.cpp
+)
+
+# Use same include directories (project already sets include_directories(include))
+# Apply similar compile options as main target
+if(MSVC)
+    target_compile_options(GravityEngineTests PRIVATE 
+        /W4
+        /permissive-
+    )
+    target_compile_options(GravityEngineTests PRIVATE 
+        $<$<CONFIG:Debug>:/Od>
+        $<$<CONFIG:Release>:/O2>
+    )
+else()
+    target_compile_options(GravityEngineTests PRIVATE 
+        -Wall
+        -Wextra
+    )
+endif()
+
+if(MSVC)
+    target_link_options(GravityEngineTests PRIVATE /DEBUG)
+endif()
+
+add_test(NAME GravityEngineTests COMMAND GravityEngineTests)
+message(STATUS "Added GravityEngine unit tests target")

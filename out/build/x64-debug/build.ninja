@@ -76,6 +76,24 @@ build CMakeFiles\ThreeBodyCalendar.dir\src\physics\CelestialBody.cpp.obj: CXX_CO
   TARGET_COMPILE_PDB = CMakeFiles\ThreeBodyCalendar.dir\
   TARGET_PDB = bin\ThreeBodyCalendar.pdb
 
+build CMakeFiles\ThreeBodyCalendar.dir\src\physics\GravityEngine.cpp.obj: CXX_COMPILER__ThreeBodyCalendar_unscanned_Debug D$:\courses\_debug\2025autumn\C\perpetual_calendar\ThreeBodyCalendar\src\physics\GravityEngine.cpp || cmake_object_order_depends_target_ThreeBodyCalendar
+  DEFINES = -DUNICODE -D_UNICODE
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -MDd /W4 /permissive- /Od
+  INCLUDES = -ID:\courses\_debug\2025autumn\C\perpetual_calendar\ThreeBodyCalendar\include
+  OBJECT_DIR = CMakeFiles\ThreeBodyCalendar.dir
+  OBJECT_FILE_DIR = CMakeFiles\ThreeBodyCalendar.dir\src\physics
+  TARGET_COMPILE_PDB = CMakeFiles\ThreeBodyCalendar.dir\
+  TARGET_PDB = bin\ThreeBodyCalendar.pdb
+
+build CMakeFiles\ThreeBodyCalendar.dir\src\physics\Integrator.cpp.obj: CXX_COMPILER__ThreeBodyCalendar_unscanned_Debug D$:\courses\_debug\2025autumn\C\perpetual_calendar\ThreeBodyCalendar\src\physics\Integrator.cpp || cmake_object_order_depends_target_ThreeBodyCalendar
+  DEFINES = -DUNICODE -D_UNICODE
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -MDd /W4 /permissive- /Od
+  INCLUDES = -ID:\courses\_debug\2025autumn\C\perpetual_calendar\ThreeBodyCalendar\include
+  OBJECT_DIR = CMakeFiles\ThreeBodyCalendar.dir
+  OBJECT_FILE_DIR = CMakeFiles\ThreeBodyCalendar.dir\src\physics
+  TARGET_COMPILE_PDB = CMakeFiles\ThreeBodyCalendar.dir\
+  TARGET_PDB = bin\ThreeBodyCalendar.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ThreeBodyCalendar
@@ -84,7 +102,7 @@ build CMakeFiles\ThreeBodyCalendar.dir\src\physics\CelestialBody.cpp.obj: CXX_CO
 #############################################
 # Link the executable bin\ThreeBodyCalendar.exe
 
-build bin\ThreeBodyCalendar.exe: CXX_EXECUTABLE_LINKER__ThreeBodyCalendar_Debug CMakeFiles\ThreeBodyCalendar.dir\src\core\Vector3D.cpp.obj CMakeFiles\ThreeBodyCalendar.dir\src\main.cpp.obj CMakeFiles\ThreeBodyCalendar.dir\src\physics\CelestialBody.cpp.obj
+build bin\ThreeBodyCalendar.exe: CXX_EXECUTABLE_LINKER__ThreeBodyCalendar_Debug CMakeFiles\ThreeBodyCalendar.dir\src\core\Vector3D.cpp.obj CMakeFiles\ThreeBodyCalendar.dir\src\main.cpp.obj CMakeFiles\ThreeBodyCalendar.dir\src\physics\CelestialBody.cpp.obj CMakeFiles\ThreeBodyCalendar.dir\src\physics\GravityEngine.cpp.obj CMakeFiles\ThreeBodyCalendar.dir\src\physics\Integrator.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console  /DEBUG
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
@@ -95,6 +113,74 @@ build bin\ThreeBodyCalendar.exe: CXX_EXECUTABLE_LINKER__ThreeBodyCalendar_Debug 
   TARGET_FILE = bin\ThreeBodyCalendar.exe
   TARGET_IMPLIB = lib\ThreeBodyCalendar.lib
   TARGET_PDB = bin\ThreeBodyCalendar.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target GravityEngineTests
+
+
+#############################################
+# Order-only phony target for GravityEngineTests
+
+build cmake_object_order_depends_target_GravityEngineTests: phony || .
+
+build CMakeFiles\GravityEngineTests.dir\tests\GravityEngineTests.cpp.obj: CXX_COMPILER__GravityEngineTests_unscanned_Debug D$:\courses\_debug\2025autumn\C\perpetual_calendar\ThreeBodyCalendar\tests\GravityEngineTests.cpp || cmake_object_order_depends_target_GravityEngineTests
+  DEFINES = -DUNICODE -D_UNICODE
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -MDd /W4 /permissive- /Od
+  INCLUDES = -ID:\courses\_debug\2025autumn\C\perpetual_calendar\ThreeBodyCalendar\include
+  OBJECT_DIR = CMakeFiles\GravityEngineTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\GravityEngineTests.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\GravityEngineTests.dir\
+  TARGET_PDB = bin\GravityEngineTests.pdb
+
+build CMakeFiles\GravityEngineTests.dir\src\physics\GravityEngine.cpp.obj: CXX_COMPILER__GravityEngineTests_unscanned_Debug D$:\courses\_debug\2025autumn\C\perpetual_calendar\ThreeBodyCalendar\src\physics\GravityEngine.cpp || cmake_object_order_depends_target_GravityEngineTests
+  DEFINES = -DUNICODE -D_UNICODE
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -MDd /W4 /permissive- /Od
+  INCLUDES = -ID:\courses\_debug\2025autumn\C\perpetual_calendar\ThreeBodyCalendar\include
+  OBJECT_DIR = CMakeFiles\GravityEngineTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\GravityEngineTests.dir\src\physics
+  TARGET_COMPILE_PDB = CMakeFiles\GravityEngineTests.dir\
+  TARGET_PDB = bin\GravityEngineTests.pdb
+
+build CMakeFiles\GravityEngineTests.dir\src\core\Vector3D.cpp.obj: CXX_COMPILER__GravityEngineTests_unscanned_Debug D$:\courses\_debug\2025autumn\C\perpetual_calendar\ThreeBodyCalendar\src\core\Vector3D.cpp || cmake_object_order_depends_target_GravityEngineTests
+  DEFINES = -DUNICODE -D_UNICODE
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -MDd /W4 /permissive- /Od
+  INCLUDES = -ID:\courses\_debug\2025autumn\C\perpetual_calendar\ThreeBodyCalendar\include
+  OBJECT_DIR = CMakeFiles\GravityEngineTests.dir
+  OBJECT_FILE_DIR = CMakeFiles\GravityEngineTests.dir\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\GravityEngineTests.dir\
+  TARGET_PDB = bin\GravityEngineTests.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target GravityEngineTests
+
+
+#############################################
+# Link the executable bin\GravityEngineTests.exe
+
+build bin\GravityEngineTests.exe: CXX_EXECUTABLE_LINKER__GravityEngineTests_Debug CMakeFiles\GravityEngineTests.dir\tests\GravityEngineTests.cpp.obj CMakeFiles\GravityEngineTests.dir\src\physics\GravityEngine.cpp.obj CMakeFiles\GravityEngineTests.dir\src\core\Vector3D.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console  /DEBUG
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\GravityEngineTests.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\GravityEngineTests.dir\
+  TARGET_FILE = bin\GravityEngineTests.exe
+  TARGET_IMPLIB = lib\GravityEngineTests.lib
+  TARGET_PDB = bin\GravityEngineTests.pdb
+
+
+#############################################
+# Utility command for test
+
+build CMakeFiles\test.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\courses\_debug\2025autumn\C\perpetual_calendar\ThreeBodyCalendar\out\build\x64-debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test: phony CMakeFiles\test.util
 
 
 #############################################
@@ -122,6 +208,10 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build GravityEngineTests: phony bin\GravityEngineTests.exe
+
+build GravityEngineTests.exe: phony bin\GravityEngineTests.exe
+
 build ThreeBodyCalendar: phony bin\ThreeBodyCalendar.exe
 
 build ThreeBodyCalendar.exe: phony bin\ThreeBodyCalendar.exe
@@ -134,7 +224,7 @@ build ThreeBodyCalendar.exe: phony bin\ThreeBodyCalendar.exe
 #############################################
 # Folder: D:/courses/_debug/2025autumn/C/perpetual_calendar/ThreeBodyCalendar/out/build/x64-debug
 
-build all: phony bin\ThreeBodyCalendar.exe
+build all: phony bin\ThreeBodyCalendar.exe bin\GravityEngineTests.exe
 
 # =============================================================================
 # Built-in targets
