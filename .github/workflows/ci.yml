@@ -31,4 +31,7 @@ jobs:
     - name: Test
       run: |
         cd ${{github.workspace}}/build
-        ctest --verbose
+        # 运行 Debug 配置的测试（最常用，默认构建通常是 Debug）
+        ctest -C Debug
+        # 若构建了 Release 配置，运行 Release 版本的测试
+        ctest -C Release
